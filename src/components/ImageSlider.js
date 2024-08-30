@@ -32,13 +32,13 @@ function ImageSlider() {
   }, []);
 
   return (
-    <div className="relative w-full max-w-8xl mx-auto">
+    <div className="relative w-full mx-auto">
       {/* Slider Images */}
       <div className="overflow-hidden rounded-lg">
         <img
           src={images[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className="w-full transition-all duration-500 ease-in-out"
+          className="w-full h-[600px] transition-all duration-500 ease-in-out"
         />
       </div>
 
