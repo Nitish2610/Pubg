@@ -3,7 +3,7 @@ import React from 'react';
 
 function ContestCard({ imageSrc, title, description, link }) {
   return (
-    <div className="mx-2 md:w-[300px] md:h-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700
+    <div className="mx-6 md:w-[300px] md:h-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700
     transition-transform duration-300 ease-in-out hover:scale-105">
       <a href={link}>
         <img className="rounded-t-lg w-full h-40" src={imageSrc} alt={title} />

@@ -11,6 +11,7 @@ import contest6 from "./assets/contest6.jpg";
 import contest7 from "./assets/contest7.jpg";
 import contest8 from "./assets/contest8.jpg";
 import Faq from "./components/Faq.js"
+import { Link } from 'react-router-dom';
 
 const contestCards = [
   {
@@ -69,15 +70,15 @@ function App() {
       {/* navbar starts here */}
       <nav className="w-full h-16 bg-black flex justify-between px-6">
         <div className="text-2xl text-yellow-600 font-semibold content-center mx-2">
-          PUBG BATTLEGROUND
+        COSMIC PLAYGROUND
         </div>
         <div className="content-center">
           <ul className="md:flex">
-            <li className="text-xl text-white mx-[13px] cursor-pointer">
-              Login
+            <li className="text-xl text-white mx-[13px] cursor-pointer hover:text-blue-400 transition duration-300">
+            <Link to="/login">Login</Link>
             </li>
-            <li className="text-xl text-white mx-[13px] cursor-pointer">
-              Signup
+            <li className="text-xl text-white mx-[13px] cursor-pointer hover:text-blue-400 transition duration-300">
+            <Link to="/signup">Signup</Link>
             </li>
             {/* <li className='text-xl text-white mx-[15px] cursor-pointer'>Play Now</li> */}
           </ul>
@@ -187,10 +188,10 @@ function App() {
   </div>
   <div class="p-4">
       <h5 class="mb-3 text-gray-800 text-2xl font-bold">
-      PUBG: The Ultimate Battle Royale Adventure
+      BGMI: The Ultimate Battle Royale Adventure
       </h5>
       <p class="text-gray-700 leading-relaxed font-light">
-      <span class="font-semibold">PUBG</span> delivers a heart-pounding battle royale experience that keeps players on the edge of their seats. Dive into a sprawling map with diverse terrains, where every match offers a fresh challenge. The immersive graphics, realistic gunplay, and strategic depth make each game a unique journey. Whether you’re teaming up with friends or going solo, the thrill of being the last one standing is unparalleled. The game’s frequent updates and vibrant community ensure a constantly evolving experience, making <span class="font-semibold">PUBG</span> a must-play for battle royale enthusiasts.
+      <span class="font-semibold">BGMI</span> delivers a heart-pounding battle royale experience that keeps players on the edge of their seats. Dive into a sprawling map with diverse terrains, where every match offers a fresh challenge. The immersive graphics, realistic gunplay, and strategic depth make each game a unique journey. Whether you’re teaming up with friends or going solo, the thrill of being the last one standing is unparalleled. The game’s frequent updates and vibrant community ensure a constantly evolving experience, making <span class="font-semibold">PUBG</span> a must-play for battle royale enthusiasts.
       </p>
       <div class="mt-4 flex items-center">
           <span class="text-yellow-400 text-2xl">★★★★★</span>
@@ -207,10 +208,10 @@ function App() {
   </div>
   <div class="p-4">
       <h5 class="mb-3 text-gray-800 text-2xl font-bold">
-      PUBG: Strategy and Skill Combined
+      BGMI: Strategy and Skill Combined
       </h5>
       <p class="text-gray-700 leading-relaxed font-light">
-      <span class="font-semibold">PUBG</span> is more than just a shooter; it’s a test of wits and strategy. Whether you're planning an ambush or navigating the shrinking playzone, every decision matters. The blend of stealth, tactics, and high-intensity firefights makes this game a standout in the battle royale genre. With each match, you learn, adapt, and evolve, making every victory incredibly satisfying.
+      <span class="font-semibold">BGMI</span> is more than just a shooter; it’s a test of wits and strategy. Whether you're planning an ambush or navigating the shrinking playzone, every decision matters. The blend of stealth, tactics, and high-intensity firefights makes this game a standout in the battle royale genre. With each match, you learn, adapt, and evolve, making every victory incredibly satisfying.
       </p>
       <div class="mt-4 flex items-center">
           <span class="text-yellow-400 text-2xl">★★★★☆</span>
@@ -226,10 +227,10 @@ function App() {
   </div>
   <div class="p-4">
       <h5 class="mb-3 text-gray-800 text-2xl font-bold">
-      PUBG: Heart-Pounding Action at Its Best
+      BGMI: Heart-Pounding Action at Its Best
       </h5>
       <p class="text-gray-700 leading-relaxed font-light">
-      From the moment you jump out of the plane, <span class="font-semibold">PUBG</span> is an adrenaline-fueled race to survive. The intensity of each encounter, the thrill of finding rare loot, and the rush of outmaneuvering your opponents create an experience that’s hard to match. Every game is a new story, filled with unexpected twists and unforgettable moments.
+      From the moment you jump out of the plane, <span class="font-semibold">BGMI</span> is an adrenaline-fueled race to survive. The intensity of each encounter, the thrill of finding rare loot, and the rush of outmaneuvering your opponents create an experience that’s hard to match. Every game is a new story, filled with unexpected twists and unforgettable moments.
       </p>
       <div class="mt-4 flex items-center">
           <span class="text-yellow-400 text-2xl">★★★★★</span>
@@ -375,16 +376,19 @@ function App() {
 
         <div className="justify-center flex">
           <h1 className="text-white font-bold text-2xl mt-8">
-            PUBG: BATTLEGROUNDS | KRAFTON
+            BGMI: BATTLEGROUNDS | KRAFTON
           </h1>
         </div>
 
         <div className="justify-center flex">
-          <h1 className="text-white font-medium mt-12 mb-12">
-            PRIVACY POLICY | TERMS OF SERVICE | RULES OF CONDUCT | CONTENT
-            CREATION GUIDELINE | COOKIE PREFERENCES
-          </h1>
-        </div>
+      <h1 className="text-white font-medium mt-12 mb-12 space-x-4">
+        <Link to="/privacy-policy" className="hover:underline">PRIVACY POLICY</Link> |
+        <Link to="/terms-of-service" className="hover:underline">TERMS OF SERVICE</Link> |
+        <Link to="/rules-of-conduct" className="hover:underline">RULES OF CONDUCT</Link> |
+        <Link to="/content-creation-guideline" className="hover:underline">CONTENT CREATION GUIDELINE</Link> |
+        <Link to="/cookie-preferences" className="hover:underline">COOKIE PREFERENCES</Link>
+      </h1>
+    </div>
       </div>
     </div>
   );

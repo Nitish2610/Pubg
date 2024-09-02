@@ -48,7 +48,7 @@ const Faq = () => {
       
       <div className="space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="bg-gray-800 text-white shadow-md rounded-lg p-6">
+          <div key={index} className="bg-gray-800 text-white shadow-md  p-6">
             <div 
               className="flex items-center justify-between cursor-pointer"
               onClick={() => toggleQuestion(index)}
@@ -59,7 +59,7 @@ const Faq = () => {
               </svg>
             </div>
             {openQuestion === index && (
-              <div className="mt-3 text-gray-300">
+              <div className="mt-5 p-2 text-gray-300">
                 <p>{faq.answer}</p>
               </div>
             )}
